@@ -98,23 +98,24 @@ export default function RiskScoreGauge({
             <circle cx="100" cy="100" r="7" fill="#1E293B" />
 
             {/* Animating Needle */}
-            <motion.g
+            <motion.line 
+              x1="100" 
+              y1="100" 
+              x2="100" 
+              y2="34" 
+              stroke="#1E293B" 
+              strokeWidth="4" 
+              strokeLinecap="round"
               initial={{ rotate: -90 }}
               animate={{ rotate: needleRotation }}
-              style={{ transformOrigin: "100px 100px" }}
+              style={{ transformOrigin: "100px 100px", transformBox: "view-box" }}
+              originX={0.5}
+              originY={1.0}
               transition={{ type: "spring", stiffness: 60, damping: 15 }}
-            >
-              <line 
-                x1="100" 
-                y1="100" 
-                x2="100" 
-                y2="34" 
-                stroke="#1E293B" 
-                strokeWidth="4" 
-                strokeLinecap="round" 
-              />
-              <circle cx="100" cy="100" r="3" fill="#FFFFFF" />
-            </motion.g>
+            />
+
+            {/* Needle pivot inner white dot */}
+            <circle cx="100" cy="100" r="3" fill="#FFFFFF" />
           </svg>
         </div>
 

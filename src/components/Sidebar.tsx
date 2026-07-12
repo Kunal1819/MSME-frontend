@@ -62,20 +62,7 @@ export default function Sidebar({ currentScreen, onScreenChange, onOpenNewAssess
           );
         })}
 
-        {/* OCEN Network (Display Link) */}
-        <div className="pt-2">
-          <button
-            onClick={() => onScreenChange("alt-data")}
-            className={`w-full flex items-center space-x-3 px-3 py-2.5 rounded transition-all text-left font-sans text-sm font-medium ${
-              currentScreen === "alt-data"
-                ? "text-white font-bold border-r-2 border-[#0284C7] bg-slate-800"
-                : "text-slate-400 hover:bg-slate-800/50 hover:text-white"
-            }`}
-          >
-            <Network className={`w-[18px] h-[18px] ${currentScreen === "alt-data" ? "text-[#0284C7]" : "text-slate-400"}`} />
-            <span>OCEN Network</span>
-          </button>
-        </div>
+
       </nav>
 
       {/* Primary Action Trigger */}
