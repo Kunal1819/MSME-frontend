@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+:root {
+  --bg: #F8F9FB;
+  --sidebar: #0F172A;
+  --card-bg: #FFFFFF;
+  --border: #E2E8F0;
+  --text-main: #1E293B;
+  --text-muted: #64748B;
+  --accent: #0284C7;
+  --success: #10B981;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-bg: var(--bg);
+  --color-brand-sidebar: var(--sidebar);
+  --color-brand-card: var(--card-bg);
+  --color-brand-border: var(--border);
+  --color-brand-text: var(--text-main);
+  --color-brand-muted: var(--text-muted);
+  --color-brand-accent: var(--accent);
+  --color-brand-success: var(--success);
+  --color-brand-warning: var(--warning);
+  --color-brand-danger: var(--danger);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animations helper */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+

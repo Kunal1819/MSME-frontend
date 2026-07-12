@@ -1,0 +1,6 @@
+{
+  "name": "RiskIntel MSME",
+  "description": "Institutional banking credit underwriting, ALT-data insights, and credit memorandum tool for MSME lenders.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
